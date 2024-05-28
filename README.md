@@ -25,6 +25,7 @@ applications, to help interns develop the necessary skills and knowledge to succ
 - K-Nearest Neighbors
 - Naive Bayes Classifier
 - Model Deployment
+- etc.
 
 ## Getting Started with this Repo
 
