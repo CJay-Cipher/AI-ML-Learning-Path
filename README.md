@@ -1,11 +1,15 @@
 ```markdown
 # AI/ML Learning Path
 
-This repository contains code, files, and resources related to the machine learning internship program at Zummit Africa.
+This repository contains code, files, and resources related to the machine learning
+internship program at Zummit Africa.
 
 ## Overview
 
-The goal of this repository is to provide a structured learning path and hands-on experience in the field of artificial intelligence and machine learning. The materials cover a wide range of topics, from fundamental concepts to practical applications, to help interns develop the necessary skills and knowledge to succeed in the field.
+The goal of this repository is to provide a structured learning path and
+hands-on experience in the field of artificial intelligence and machine learning.
+The materials cover a wide range of topics, from fundamental concepts to practical
+applications, to help interns develop the necessary skills and knowledge to succeed in the field.
 
 ## Contents
 
@@ -41,5 +45,6 @@ pip install -r requirements.txt
 ```
 ## Contributing
 
-If you have any suggestions, improvements, or additional resources to contribute, feel free to create a new issue or submit a pull request.
+If you have any suggestions, improvements, or additional resources to contribute,
+feel free to create a new issue or submit a pull request.
 ```
