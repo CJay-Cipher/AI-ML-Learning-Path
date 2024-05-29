@@ -1,4 +1,3 @@
-```markdown
 # AI/ML Learning Path
 
 This repository contains code, files, and resources related to the machine learning
@@ -25,9 +24,8 @@ applications, to help interns develop the necessary skills and knowledge to succ
 - Support Vector Machines
 - K-Nearest Neighbors
 - Naive Bayes Classifier
-- etc.
-
 - Model Deployment
+- etc.
 
 ## Getting Started with this Repo
 
@@ -47,4 +45,4 @@ pip install -r requirements.txt
 
 If you have any suggestions, improvements, or additional resources to contribute,
 feel free to create a new issue or submit a pull request.
-```
+
