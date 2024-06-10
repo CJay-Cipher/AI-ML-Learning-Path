@@ -44,7 +44,7 @@ def add_bg_from_local(image_file):
     """,
     unsafe_allow_html=True
     )
-add_bg_from_local('images/house.jpg')
+add_bg_from_local('images/house2.jpg')
 
 # Create the Streamlit app
 st.title("Lagos House Price Prediction")
@@ -80,7 +80,8 @@ if st.button("Predict House Price"):
             predicted_price = lr_model.predict(input_data)[0]
             predicted_price = round(predicted_price)
             predicted_price = "{:,}".format(predicted_price)
-            st.write(f"### The predicted house price is ₦{predicted_price}")
+            st.write(f"### The predicted house price is:")
+            st.write(f"## ₦{predicted_price}")
             
         except:
             st.error("Oops! Looks like this algorithm does't work.\
@@ -92,7 +93,7 @@ if st.button("Predict House Price"):
             predicted_price = gb_model.predict(input_data)[0]
             predicted_price = round(predicted_price)
             predicted_price = "{:,}".format(predicted_price)
-            st.write(f"### The predicted house price is ₦ {predicted_price}")
+            st.write(f"### The predicted house price is ₦{predicted_price}")
 
         except:
             st.error("Oops! Looks like this algorithm does't work.\
