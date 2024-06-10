@@ -1,14 +1,16 @@
 import streamlit as st
 import pickle
 import pandas as pd
+import time
+import base64
 
 from data_preprocessor import preprocess_data
 
 # Load the saved model
-with open('lr_model.pkl', 'rb') as f:
+with open('models/lr_model.pkl', 'rb') as f:
     lr_model = pickle.load(f)
 
-with open('gb_model.pkl', 'rb') as f:
+with open('models/gb_model.pkl', 'rb') as f:
     gb_model = pickle.load(f)
 
 # Define the input features
@@ -26,6 +28,23 @@ unique_towns = ['Lekki', 'Ajah', 'Victoria Island (VI)', 'Ikeja', 'Magodo', 'Yab
                'Ketu', 'Ojota', 'Oshodi', 'Amuwo Odofin', 'Agbara-Igbesa',
                'Ijaiye', 'Apapa', 'Lagos Island', 'Epe', 'Oke-Odo', 'Egbe',
                'Orile', 'Badagry', 'Ijesha']
+
+
+def add_bg_from_local(image_file):
+    with open(image_file, "rb") as image_file:
+        encoded_string = base64.b64encode(image_file.read())
+    st.markdown(
+    f"""
+    <style>
+    .stApp {{
+        background-image: url(data:image/{"jpg"};base64,{encoded_string.decode()});
+        background-size: cover
+    }}
+    </style>
+    """,
+    unsafe_allow_html=True
+    )
+add_bg_from_local('images/house.jpg')
 
 # Create the Streamlit app
 st.title("Lagos House Price Prediction")
@@ -51,20 +70,11 @@ if st.button("Predict House Price"):
         'title': [unique_titles.index(title)],
         'town': [unique_towns.index(town)]
     })
-    # X_data = preprocess_data(input_data)
-
-    # Make the prediction
-    # predicted_price = lr_model.predict(input_data)[0]
-
-    # # Display the predicted price
-    # st.write(f"The predicted house price is ₦{predicted_price:.2f}")
 
     if sys == 'Linear Regression':
         try:
-            # with st.spinner('Crunching the numbers...'):
-            #     top_recommendations = content_model(movie_list=fav_movies,
-            #                                         top_n=13)
-
+            with st.spinner('Crunching the numbers...'):
+                time.sleep(1)
             
             # Make the prediction
             predicted_price = lr_model.predict(input_data)[0]
