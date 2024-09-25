@@ -47,6 +47,21 @@ You can select between two models for prediction:
 - **Dataset**: `price_data.csv` containing property details and prices.
 - **Streamlit App**: `price_prediction.py` for interactive house price predictions.
 
+## Requirements
+- Python 3.x
+- pandas
+- numpy
+- scikit-learn
+- streamlit
+- 
+## Installation
+
+To install the required Python libraries, you can use the provided `requirements.txt` file. Run the following command in your terminal:
+
+```bash
+pip install -r requirements.txt
+```
+
 ## Usage
 1. **Data Preprocessing**:
    - Use `data_preprocessor.py` to preprocess your data before training the models.
@@ -60,8 +75,6 @@ You can select between two models for prediction:
    - Run `price_prediction.py` to launch the interactive house price prediction app.
 
 ## Note
-Please make sure you have the necessary data files and models in their respective directories before running the app.
+Please make sure you have the necessary data files, models, and required libraries installed before running the app.
 
 ---
-
-*Feel free to contribute, report issues, or suggest improvements for the House Price Prediction App in Lagos!*
